@@ -43,13 +43,13 @@ constructor(uint _PID,  address _admin, string memory _name, uint256 _createdOn,
 // a modifier is used to check if the sender is admin or not
 modifier isAdmin()
 {
-  require(msg.sender==getAdmin());
+  require(msg.sender==getAdmin(),"only admin");
   _;
 }
 /// A modifier to check if the project can accept new members or not.
 modifier isOpen()
 {
-  require(prj.maxContributers>prj.noContributers);
+  require(prj.maxContributers>prj.noContributers, "This project is not accept new contributer");
   _;
 }
 
@@ -79,7 +79,7 @@ returns(address)
   */
  function fundProject() public payable
  {
-   require (msg.sender.balance>= msg.value);
+   require (msg.sender.balance>= msg.value, "The sent value is less than the sender balance");
    address(this).transfer(msg.value);
 
  }

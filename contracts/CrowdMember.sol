@@ -38,7 +38,7 @@ mapping (address=>address) private ownerToProjects;
 ///Modifiers
 modifier isEnrolled()
 {
-  require (enrolledMembers[msg.sender]==true);
+  require (enrolledMembers[msg.sender]==true, "Member is not enrolled");
   _;
 }
 ////*events*///
@@ -55,7 +55,7 @@ event LogEnrolled(address indexed accountAddress);
     * @dev Storing  member data in enrolled and members
     * @param _firstNameMember : First Name of the member
     * @param _lastNameMember : Last name of the member
-    * @param _emailMember : email of the member 
+    * @param _emailMember : email of the member
     * @return a flag refered that the member enrolled succefflly.
     */
 

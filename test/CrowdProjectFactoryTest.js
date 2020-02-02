@@ -41,8 +41,8 @@ contract("CrowdProjectFactory", async accounts => {
     });
 
     it("Owner can withdraw funds generated from ProjectFactory initialization fees", async () => {
-      await instance.createProject(_name,2,_discription, {from: _admin1, value: toWei("0.1", "ether")});
-      await instance.createProject("Test DHackaton 2", 20, {from: _admin2, value: toWei("0.1", "ether")});
+      await instance.createProject(_name,2,_discription, {from: _admin1, value: toWei("0.6", "ether")});
+      await instance.createProject("Test Project 2", 20,"Created for test", {from: _admin2, value: toWei("0.4", "ether")});
 
       const preWithdrawAmount = await web3.eth.getBalance(_owner);
       let receipt = await instance.withdrawDonations({from: _owner});
@@ -51,7 +51,7 @@ contract("CrowdProjectFactory", async accounts => {
       let TXreceipt = await web3.eth.getTransaction(receipt.tx);
       let TXCost = Number(TXreceipt.gasPrice) * receipt.receipt.gasUsed;
 
-      let expectedPostAmount = (new BN(preWithdrawAmount).add(new BN(toWei("0.2", "ether"))).sub(new BN(TXCost))).toString()
+      let expectedPostAmount = (new BN(preWithdrawAmount).add(new BN(toWei("1", "ether"))).sub(new BN(TXCost))).toString()
 
       assert.equal(postWithdrawAmount, expectedPostAmount)
     });

@@ -10,84 +10,86 @@ Starting migrations...
 
    Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x19fc18c8149404c22030929f98987302ed3dbe2917fd63f2f025680b9344ecbe
-   > Blocks: 6            Seconds: 33
-   > contract address:    0x6DE020EfBF78022bCc8012a3556653AECC32E10e
-   > block number:        6096845
-   > block timestamp:     1564559576
+   > transaction hash:    0x4e679a0308ea5202565a33cb677225824f5eb1287f36d82790206861e8a9ea18
+   > Blocks: 2            Seconds: 21
+   > contract address:    0x7b80b898349d39C2f182c0e8096e7eBC4CEf9893
+   > block number:        7249378
+   > block timestamp:     1580659344
    > account:             0x3245f8095EEaABA4A4E7aE64767Fad6dE401e66f
-   > balance:             10.99339798
-   > gas used:            261393
+   > balance:             10.952624594
+   > gas used:            162243
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.00522786 ETH
+   > total cost:          0.00324486 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 2 (block: 6096847)
+   > confirmation number: 1 (block: 7249379)
+   > confirmation number: 2 (block: 7249380)
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.00522786 ETH
+   > Total cost:          0.00324486 ETH
 
 
-2_initial_migration.js
-======================
+2_deploy_contracts.js
+=====================
 
    Deploying 'CrowdMember'
    -----------------------
-   > transaction hash:    0xdaa7cf22b7e7c7db9939d911e4fddd83fac7655d8e6411b5805d97e45a2237a4
-   > Blocks: 2            Seconds: 26
-   > contract address:    0x54559a06E1798226184Ca8cC1f20a98e75FCcfc0
-   > block number:        6096851
-   > block timestamp:     1564559647
+   > transaction hash:    0xe0e91013c29ad98331433dc2b96a0badbac6fc71f3e92608b67687113a33451e
+   > Blocks: 0            Seconds: 14
+   > contract address:    0x41Ba78d7C37875DA7e9EA1B55999181131ce519c
+   > block number:        7249386
+   > block timestamp:     1580659411
    > account:             0x3245f8095EEaABA4A4E7aE64767Fad6dE401e66f
-   > balance:             10.96829816
-   > gas used:            1212968
+   > balance:             10.937721714
+   > gas used:            702803
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.02425936 ETH
+   > total cost:          0.01405606 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 1 (block: 6096853)
-   > confirmation number: 2 (block: 6096854)
+   > confirmation number: 1 (block: 7249387)
+   > confirmation number: 2 (block: 7249388)
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.02425936 ETH
+   > Total cost:          0.01405606 ETH
 
 
-3_initial_migration.js
-======================
+3_deploy_contracts.js
+=====================
 
-   Deploying 'Project'
-   -------------------
-   > transaction hash:    0x157eda9b9f03d8541bc1d3821145f914d0d85e52890f17ab726a387383bb43f2
-   > Blocks: 2            Seconds: 52
-   > contract address:    0x4CdCfb5015D47348e7829DF9eae75b1743C00fec
-   > block number:        6096859
-   > block timestamp:     1564559785
+   Deploying 'CrowdProjectFactory'
+   -------------------------------
+   > transaction hash:    0x825bb59182d603c369b0e7096dcb78a46f7ee79dd1f9e06ef91b0a243dc6776f
+   > Blocks: 0            Seconds: 57
+   > contract address:    0x1c2071D1Ec093A9d35019c52797EC28989818736
+   > block number:        7249393
+   > block timestamp:     1580659459
    > account:             0x3245f8095EEaABA4A4E7aE64767Fad6dE401e66f
-   > balance:             10.96639478
-   > gas used:            68146
+   > balance:             10.906368574
+   > gas used:            1540316
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.00136292 ETH
+   > total cost:          0.03080632 ETH
 
    Pausing for 2 confirmations...
    ------------------------------
-   > confirmation number: 3 (block: 6096862)
+   > confirmation number: 1 (block: 7249394)
+   > confirmation number: 2 (block: 7249395)
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.00136292 ETH
+   > Total cost:          0.03080632 ETH
 
 
 Summary
 =======
 > Total deployments:   3
-> Final cost:          0.03085014 ETH
+> Final cost:          0.04810724 ETH

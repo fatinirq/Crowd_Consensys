@@ -74,7 +74,7 @@ contract CrowdProjectFactory is Ownable {
         isOperational() //isMember
        returns (CrowdProject newProject)
       {
-        require (_maxContributers>=1);
+        require (_maxContributers>=1, "Max contributers could not be zero or less");
         indexProject +=1;
         newProject = new CrowdProject( indexProject,msg.sender, _name, block.timestamp, _maxContributers, _discription);
         ProjectsRegistry[indexProject] = ProjectBirthCertificate(indexProject, msg.sender, block.timestamp, newProject);

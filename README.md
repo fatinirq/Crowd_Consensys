@@ -23,6 +23,7 @@ Install these prerequisites to follow along with the tutorial. See free video tu
 ```
 $ cd CrowdFund
 $ npm install
+$ npm install @openzeppelin/contracts
 ```
 ## Step 4. Start Ganache
 Open the Ganache GUI (or CLI) client that you downloaded and installed. This will start your local blockchain instance. See free video tutorial for full explanation.

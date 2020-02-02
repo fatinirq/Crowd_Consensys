@@ -31,7 +31,7 @@ App = {
                               }
          //     If no injected web3 instance is detected, fall back to Ganache
         else {
-              App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+              App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
              }
         web3 = new Web3(App.web3Provider);
 
@@ -119,9 +119,13 @@ registerMember: function(fname,lname,email) {
 
 
       res=result;
+      if (res==true)
+      {
+      wndow.alert("Welcome to our crowd "+ " result = "+res );
+    }
 
     }).catch(function(err) {
-      console.log(firstName);
+      console.log("inside error " +firstName);
       console.log(lastName);
       console.log(email);
       console.log(account);

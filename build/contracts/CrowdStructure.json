@@ -1,0 +1,918 @@
+{
+  "contractName": "CrowdStructure",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol\":\"CrowdStructure\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol\":{\"keccak256\":\"0xc356240b3761a3b3547bd7caf05af3924573919311db7766763b9caa1587c540\",\"urls\":[\"bzzr://d6ac58b5d4a155600650dd3a3943cfd442ef38da1d49f0d8eb3b0d395f034dd6\"]}},\"version\":1}",
+  "bytecode": "0x604c6023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a7230582029098a92bc87549c170187dc2fb9890eafb08fd26de209ccd4252607ba89f9220029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a7230582029098a92bc87549c170187dc2fb9890eafb08fd26de209ccd4252607ba89f9220029",
+  "sourceMap": "33:722:3:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "33:722:3:-;;;;;;;;",
+  "source": "pragma solidity >=0.5.0 <0.6.0;\n library CrowdStructure\n {\n   enum   Contribution{\n      Owner\n      ,Admin\n     , Consultatnt\n     ,Skilled\n     //Investor\n   }\n   struct  MemberData {\n\n\n   string firstName;\n   string lastName;\n   //string idNo;\n   //address admin;\n   //string skills;\n   string email;\n   //string phonNo;\n   //string website;\n   //string nationality;\n   //string country;\n   //string city;\n   //string addressLine;\n   }\n   struct ProjectMember\n   {\n     address adr;\n     Contribution cont;\n\n   }\n   /// Project Modelling\n   struct Project\n   {\n    uint PID;\n    address admin;\n    string projectDiscrption;\n    string projectName;\n    uint maxContributers;\n    uint noContributers;\n    mapping (address=>ProjectMember) staff;\n   }\n\n\n }\n",
+  "sourcePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol",
+  "ast": {
+    "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol",
+    "exportedSymbols": {
+      "CrowdStructure": [
+        580
+      ]
+    },
+    "id": 581,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 545,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 580,
+        "linearizedBaseContracts": [
+          580
+        ],
+        "name": "CrowdStructure",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CrowdStructure.Contribution",
+            "id": 550,
+            "members": [
+              {
+                "id": 546,
+                "name": "Owner",
+                "nodeType": "EnumValue",
+                "src": "89:5:3"
+              },
+              {
+                "id": 547,
+                "name": "Admin",
+                "nodeType": "EnumValue",
+                "src": "102:5:3"
+              },
+              {
+                "id": 548,
+                "name": "Consultatnt",
+                "nodeType": "EnumValue",
+                "src": "115:11:3"
+              },
+              {
+                "id": 549,
+                "name": "Skilled",
+                "nodeType": "EnumValue",
+                "src": "133:7:3"
+              }
+            ],
+            "name": "Contribution",
+            "nodeType": "EnumDefinition",
+            "src": "62:99:3"
+          },
+          {
+            "canonicalName": "CrowdStructure.MemberData",
+            "id": 557,
+            "members": [
+              {
+                "constant": false,
+                "id": 552,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "191:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 551,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "191:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 554,
+                "name": "lastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "212:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 553,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "212:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 556,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "290:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 555,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "MemberData",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "165:273:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CrowdStructure.ProjectMember",
+            "id": 562,
+            "members": [
+              {
+                "constant": false,
+                "id": 559,
+                "name": "adr",
+                "nodeType": "VariableDeclaration",
+                "scope": 562,
+                "src": "473:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 558,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "473:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 561,
+                "name": "cont",
+                "nodeType": "VariableDeclaration",
+                "scope": 562,
+                "src": "491:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Contribution_$550",
+                  "typeString": "enum CrowdStructure.Contribution"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 560,
+                  "name": "Contribution",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 550,
+                  "src": "491:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Contribution_$550",
+                    "typeString": "enum CrowdStructure.Contribution"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProjectMember",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "442:73:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CrowdStructure.Project",
+            "id": 579,
+            "members": [
+              {
+                "constant": false,
+                "id": 564,
+                "name": "PID",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "568:8:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 563,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "568:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 566,
+                "name": "admin",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "582:13:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 565,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 568,
+                "name": "projectDiscrption",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "601:24:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 567,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "601:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 570,
+                "name": "projectName",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "631:18:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 569,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "631:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 572,
+                "name": "maxContributers",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "655:20:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 571,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 574,
+                "name": "noContributers",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "681:19:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 573,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "681:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 578,
+                "name": "staff",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "706:38:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ProjectMember_$562_storage_$",
+                  "typeString": "mapping(address => struct CrowdStructure.ProjectMember)"
+                },
+                "typeName": {
+                  "id": 577,
+                  "keyType": {
+                    "id": 575,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "706:32:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ProjectMember_$562_storage_$",
+                    "typeString": "mapping(address => struct CrowdStructure.ProjectMember)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 576,
+                    "name": "ProjectMember",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 562,
+                    "src": "724:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProjectMember_$562_storage_ptr",
+                      "typeString": "struct CrowdStructure.ProjectMember"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Project",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "544:206:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 581,
+        "src": "33:722:3"
+      }
+    ],
+    "src": "0:756:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/fatin/MyProjects/Solidity/CrowdFun/contracts/CrowdStructure.sol",
+    "exportedSymbols": {
+      "CrowdStructure": [
+        580
+      ]
+    },
+    "id": 581,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 545,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 580,
+        "linearizedBaseContracts": [
+          580
+        ],
+        "name": "CrowdStructure",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CrowdStructure.Contribution",
+            "id": 550,
+            "members": [
+              {
+                "id": 546,
+                "name": "Owner",
+                "nodeType": "EnumValue",
+                "src": "89:5:3"
+              },
+              {
+                "id": 547,
+                "name": "Admin",
+                "nodeType": "EnumValue",
+                "src": "102:5:3"
+              },
+              {
+                "id": 548,
+                "name": "Consultatnt",
+                "nodeType": "EnumValue",
+                "src": "115:11:3"
+              },
+              {
+                "id": 549,
+                "name": "Skilled",
+                "nodeType": "EnumValue",
+                "src": "133:7:3"
+              }
+            ],
+            "name": "Contribution",
+            "nodeType": "EnumDefinition",
+            "src": "62:99:3"
+          },
+          {
+            "canonicalName": "CrowdStructure.MemberData",
+            "id": 557,
+            "members": [
+              {
+                "constant": false,
+                "id": 552,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "191:16:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 551,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "191:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 554,
+                "name": "lastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "212:15:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 553,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "212:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 556,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 557,
+                "src": "290:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 555,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "MemberData",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "165:273:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CrowdStructure.ProjectMember",
+            "id": 562,
+            "members": [
+              {
+                "constant": false,
+                "id": 559,
+                "name": "adr",
+                "nodeType": "VariableDeclaration",
+                "scope": 562,
+                "src": "473:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 558,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "473:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 561,
+                "name": "cont",
+                "nodeType": "VariableDeclaration",
+                "scope": 562,
+                "src": "491:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Contribution_$550",
+                  "typeString": "enum CrowdStructure.Contribution"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 560,
+                  "name": "Contribution",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 550,
+                  "src": "491:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Contribution_$550",
+                    "typeString": "enum CrowdStructure.Contribution"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ProjectMember",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "442:73:3",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CrowdStructure.Project",
+            "id": 579,
+            "members": [
+              {
+                "constant": false,
+                "id": 564,
+                "name": "PID",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "568:8:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 563,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "568:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 566,
+                "name": "admin",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "582:13:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 565,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:7:3",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 568,
+                "name": "projectDiscrption",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "601:24:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 567,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "601:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 570,
+                "name": "projectName",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "631:18:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 569,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "631:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 572,
+                "name": "maxContributers",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "655:20:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 571,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 574,
+                "name": "noContributers",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "681:19:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 573,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "681:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 578,
+                "name": "staff",
+                "nodeType": "VariableDeclaration",
+                "scope": 579,
+                "src": "706:38:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ProjectMember_$562_storage_$",
+                  "typeString": "mapping(address => struct CrowdStructure.ProjectMember)"
+                },
+                "typeName": {
+                  "id": 577,
+                  "keyType": {
+                    "id": 575,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "706:32:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ProjectMember_$562_storage_$",
+                    "typeString": "mapping(address => struct CrowdStructure.ProjectMember)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 576,
+                    "name": "ProjectMember",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 562,
+                    "src": "724:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ProjectMember_$562_storage_ptr",
+                      "typeString": "struct CrowdStructure.ProjectMember"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Project",
+            "nodeType": "StructDefinition",
+            "scope": 580,
+            "src": "544:206:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 581,
+        "src": "33:722:3"
+      }
+    ],
+    "src": "0:756:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-02-02T11:46:38.008Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

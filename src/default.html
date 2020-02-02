@@ -1,0 +1,31 @@
+<html>
+<body>
+  <div class="container" id="default" style="width: 650px;">
+    <div class="row">
+      <div class="col-lg-12">
+        <form onSubmit="App.registerMember(fname.value,lname.value,email.value); return false;">
+              <div class="form-group">
+                <label for="storeMemebr">Enter Your Info</label>
+                <br>
+                First name: <input type="text" name="fname"><br>
+                Last name: <input type="text" name="lname"><br>
+                Email: <input type="text" name="email"><br>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Join</button>
+              <hr />
+            </form>
+        <hr/>
+        <br/>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

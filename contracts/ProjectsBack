@@ -1,0 +1,32 @@
+pragma solidity >=0.4.25 <0.6.0;
+import "./CrowdMember.sol";
+import "./CrowdStructure.sol";
+contract CrowdProject
+{
+/// Contribution Modelling
+enum   Contribution{Owner, Consultatnt, Skilled, Investor }
+
+CrowdMember obj;
+
+///Create Project
+constructor(CrowdStructure.MemberData memory _data, string memory  _discription,string memory  _name,
+  address _address,CrowdStructure.Project memory _prj) internal
+{
+  //CrowdStructure.ProjectMember memory member= CrowdStructure.ProjectMember
+//  ({adr:msg.sender,data:_data,cont:CrowdStruc
+
+  _prj.projectName=_name;
+  _prj.projectDiscrption=_discription;
+  _prj.staff[_address]=CrowdStructure.ProjectMember ({adr:_address,data:_data,cont:CrowdStructure.Contribution.Owner}) ;
+
+}
+
+
+}
+contract Project is  CrowdProject
+{
+  /// add member to a project staff
+
+
+
+}
